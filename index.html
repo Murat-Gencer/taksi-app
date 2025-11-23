@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html class="light" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Taksi Şoförü - Hızlı ve Güvenli Ulaşım</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#FFC107",
+              "background-light": "#F8F9FA",
+              "background-dark": "#101922",
+              "text-light": "#212529",
+              "text-dark": "#F8F9FA",
+              "card-light": "#FFFFFF",
+              "card-dark": "#1a2632",
+              "border-light": "#e7edf4",
+              "border-dark": "#334155",
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="flex flex-1 justify-center py-5 px-4 sm:px-8 md:px-10 lg:px-20 xl:px-40">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-border-light dark:border-border-dark px-4 sm:px-10 py-3 bg-background-light dark:bg-background-dark sticky top-0 z-50" id="home">
+<div class="flex items-center gap-4 text-text-light dark:text-text-dark">
+<div class="size-6 text-primary">
+<span class="material-symbols-outlined text-4xl">local_taxi</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Hızlı Taksi</h2>
+</div>
+<!-- Burger menu button for mobile -->
+<button id="burgerBtn" class="md:hidden flex items-center justify-center p-2 rounded-lg text-primary focus:outline-none" aria-label="Menüyü Aç/Kapat">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+<div class="hidden md:flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-sm font-medium leading-normal hover:text-primary" href="#services">Hizmetler</a>
+<a class="text-sm font-medium leading-normal hover:text-primary" href="#about">Hakkımda</a>
+<a class="text-sm font-medium leading-normal hover:text-primary" href="#contact">İletişim</a>
+</div>
+<a class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-text-light text-sm font-bold leading-normal tracking-[0.015em]" href="tel:+905522203122">
+<span class="truncate">Hemen Ara</span>
+</a>
+</div>
+<!-- Mobile menu dropdown -->
+<div id="mobileMenu" class="absolute top-full left-0 w-full z-40 flex-col items-center justify-center gap-4 py-6 transition-all duration-300 md:hidden" style="display:none; background:rgba(255,255,255,0.6); backdrop-filter:blur(4px);">
+  <a class="text-lg font-bold hover:text-primary block px-6 py-2" href="#services">Hizmetler</a>
+  <a class="text-lg font-bold hover:text-primary block px-6 py-2" href="#about">Hakkımda</a>
+  <a class="text-lg font-bold hover:text-primary block px-6 py-2" href="#contact">İletişim</a>
+  <a class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-text-light text-base font-bold leading-normal tracking-[0.015em] mt-2" href="tel:+905522203122">
+    <span class="truncate">Hemen Ara</span>
+  </a>
+</div>
+</header>
+<div class="@container mt-5">
+<div class="@[480px]:p-4">
+<div class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-start justify-end px-4 pb-10 @[480px]:px-10" data-alt="Modern yellow taxi driving through a brightly lit city street at night" style='background-image: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.6) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAV0mkOnMQl-SCBxlG-uxiLeSAhkGj25_dCdaUm2BR_j_xf_N01oWMgEntoJFodFpYKRTBdMlViL-dm5CXmU_rGGK1-cy6MZfLyWWMqd3ldsapb1_7jRn0mXXJw8zdw_QnF92H7INCrmVWYE-H_-EG7ZRBAEZBCIRhmMDL2r8fDWIeivMrPxRMTnwDb4fbm1ZdSuIEJRe6NNGkShU6tR2IXbrPzbAD91V51_In6b7w_tMKRmi2YEgXAJjNtOHb7a3N_k2fXAbzOTdEi");'>
+<div class="flex flex-col gap-2 text-left">
+<h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]">Şehrin Her Yerine Hızlı ve Güvenli Ulaşım</h1>
+<h2 class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">Konforlu aracım ve profesyonel hizmetimle yolculuklarınız için bir telefon uzağınızdayım.</h2>
+</div>
+<a class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-primary text-text-light text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]" href="#contact">
+<span class="truncate">Şimdi Seyahat Yap</span>
+</a>
+</div>
+</div>
+<div class="flex flex-col gap-10 px-4 py-10 @container" id="services">
+<div class="flex flex-col gap-4">
+<h1 class="text-text-light dark:text-text-dark tracking-light text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px]">Neden Bizi Seçmelisiniz?</h1>
+<p class="text-text-light/80 dark:text-text-dark/80 text-base font-normal leading-normal max-w-[720px]">Yolculuklarınızda konfor, güvenlik ve zamanında hizmet sunuyoruz.</p>
+</div>
+<div class="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-4 p-0">
+<div class="flex flex-1 gap-3 rounded-xl border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark p-4 flex-col">
+<div class="text-primary"><span class="material-symbols-outlined text-3xl">schedule</span></div>
+<div class="flex flex-col gap-1">
+<h2 class="text-base font-bold leading-tight">7/24 Kesintisiz Hizmet</h2>
+<p class="text-text-light/70 dark:text-text-dark/70 text-sm font-normal leading-normal">Günün her saati hizmetinizdeyiz.</p>
+</div>
+</div>
+<div class="flex flex-1 gap-3 rounded-xl border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark p-4 flex-col">
+<div class="text-primary"><span class="material-symbols-outlined text-3xl">flight_takeoff</span></div>
+<div class="flex flex-col gap-1">
+<h2 class="text-base font-bold leading-tight">Havaalanı Transferi</h2>
+<p class="text-text-light/70 dark:text-text-dark/70 text-sm font-normal leading-normal">Havaalanına ve otogara zamanında ulaşım.</p>
+</div>
+</div>
+<div class="flex flex-1 gap-3 rounded-xl border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark p-4 flex-col">
+<div class="text-primary"><span class="material-symbols-outlined text-3xl">chair</span></div>
+<div class="flex flex-col gap-1">
+<h2 class="text-base font-bold leading-tight">Konforlu Yolculuk</h2>
+<p class="text-text-light/70 dark:text-text-dark/70 text-sm font-normal leading-normal">Klimalı ve temiz aracımızla rahat edin.</p>
+</div>
+</div>
+<div class="flex flex-1 gap-3 rounded-xl border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark p-4 flex-col">
+<div class="text-primary"><span class="material-symbols-outlined text-3xl">credit_card</span></div>
+<div class="flex flex-col gap-1">
+<h2 class="text-base font-bold leading-tight">Kredi Kartı Geçerli</h2>
+<p class="text-text-light/70 dark:text-text-dark/70 text-sm font-normal leading-normal">Ödemelerinizi kolayca yapın.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex p-4 @container mt-10" id="about">
+<div class="flex w-full flex-col gap-6 @[520px]:flex-row @[520px]:justify-between @[520px]:items-center bg-card-light dark:bg-card-dark p-6 rounded-xl border border-border-light dark:border-border-dark">
+<div class="flex gap-6">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full min-h-24 h-24 w-24 @[520px]:min-h-32 @[520px]:w-32" data-alt="Portrait of a friendly and professional taxi driver" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBZRHZ1MbhQtRdaLg6hORSxE2XBTsP80djUPH_DG1CDtF_J1rJFK2onlOwKqRi1SrZGjt11bvh0cfEzH7hI6_Kix5uBuo5Y-Krnt1B-wdAhQUNfpbPtgcWXYe8tAOGcxGbrNEuG3NE_IkTGukbGWp8hzCnAfyf-DIfnRHQbPLpftT-O1SFV5SrgHtO5EvdtGPvZCN2C6qzd5CpRpTh59b2dz1aje4ppizOL4wKt9gPEnziQDtcoD4pV9XY3A5u3DV8pRh-LR9vcAmWi");'></div>
+<div class="flex flex-col justify-center">
+<h2 class="text-[22px] font-bold leading-tight tracking-[-0.015em]">Hakkımda</h2>
+<p class="text-text-light/80 dark:text-text-dark/80 text-base font-normal leading-normal mt-2">10 yılı aşkın süredir İstanbul yollarında güvenli ve konforlu yolculuklar sunuyorum. Müşteri memnuniyeti benim için her zaman önceliktir.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="px-4 py-10">
+<h2 class="text-[22px] font-bold leading-tight tracking-[-0.015em] pb-5">Aracımız</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="w-full h-64 rounded-xl bg-cover bg-center" data-alt="Clean and modern exterior of the taxi vehicle" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDJta6OLDlhaZqTPpfRSBvQ-QUPTj01KTR2V5D2PU_eTmWZ6v2Jm9f60o6_BnOvrxjFMe6t9hWhl9T9bn-CE08jE6EE229OWruF5i4bnsrxzXXiiCDfrYadbbXaX2QUuoiP-XmWGBKdTzY5JIkfTnMhprdsAV1OqaWFn0lVbARr2JdTZz03TRh-ofy8ZW02WhmywqlNC3N0NRkwHqkhJF-tQ5UC3XtIRNcxuEjSLQ-87gF32uPhilLTuiNXc363nIBYz5KOzD_mPOIV");'></div>
+<div class="w-full h-64 rounded-xl bg-cover bg-center" data-alt="Spacious and clean interior of the taxi vehicle" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDn7_3LGKKgFdfR4dWuPhK8Ja7qAqIhKr7NQzfZ5bupcj1Fx1lQgdLoFGMGoHc90osyE7KcNXyBg1i6JtQSxWSyKzQLkWsGwpcjKjGTkBzJujypA2swUiG-GndpBUfHPtanOc8C80TnfavmGjLcb9rbgVGsqs2ONAbUlcqR3Z6DT6ngWZWtpMYa_DB7wtlN-vRs15K93sP11AqbSe1jqqNPij9J1yKalyifXwSFpVomGBFdG22AbBqvUf3afEC1krQB8HmFi-dpqaxN");'></div>
+</div>
+<div class="mt-4 text-center">
+<p class="text-text-light/80 dark:text-text-dark/80">Aracımız düzenli olarak dezenfekte edilmekte olup, geniş bagaj hacmi ve Wi-Fi hizmeti ile konforlu bir yolculuk sunmaktadır.</p>
+</div>
+</div>
+<div class="flex flex-col gap-10 px-4 py-10 @container">
+<div class="flex flex-col gap-4 text-center">
+<h1 class="text-text-light dark:text-text-dark tracking-light text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px] mx-auto">Müşterilerimiz Ne Diyor?</h1>
+<p class="text-text-light/80 dark:text-text-dark/80 text-base font-normal leading-normal max-w-[720px] mx-auto">Hizmetimizden memnun kalan değerli müşterilerimizin yorumları.</p>
+</div>
+<div class="relative w-full">
+<div class="overflow-hidden">
+<div class="flex gap-4">
+<div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 p-2">
+<div class="flex flex-col gap-4 rounded-xl border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark p-6 h-full">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDkc5ibpO2Hjejh1uZbap1h3m1wwCnQStglrn-0y3rBAFmhBZYe16N7I5HWY5w2t3_GGj-xdXDf6LJfvrhGxTed_7Kia16wZnsBfIyrzMN3CgO37jqUAHDMTRckFv9qQe9vVCLlJQYqNETaQ2EH-jN6h5oL_wJ3zTHi2MIxbr1i5UtA336QLuyLjdiFUKs3OANLIgN56iQC2x8WWYbDGOrAD19fXDI5mu6oY_-ksyOeTX4fR-rvBuIe2LIxt1XbNxsuheCCO89E0j2A')"></div>
+<div>
+<h3 class="font-bold">Ayşe Yılmaz</h3>
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+</div>
+</div>
+</div>
+<p class="text-text-light/70 dark:text-text-dark/70 text-sm">"Her zaman vaktinde, güler yüzlü ve profesyonel bir hizmet. Gözüm kapalı tavsiye ederim."</p>
+</div>
+</div>
+<div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 p-2">
+<div class="flex flex-col gap-4 rounded-xl border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark p-6 h-full">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDkc5ibpO2Hjejh1uZbap1h3m1wwCnQStglrn-0y3rBAFmhBZYe16N7I5HWY5w2t3_GGj-xdXDf6LJfvrhGxTed_7Kia16wZnsBfIyrzMN3CgO37jqUAHDMTRckFv9qQe9vVCLlJQYqNETaQ2EH-jN6h5oL_wJ3zTHi2MIxbr1i5UtA336QLuyLjdiFUKs3OANLIgN56iQC2x8WWYbDGOrAD19fXDI5mu6oY_-ksyOeTX4fR-rvBuIe2LIxt1XbNxsuheCCO89E0j2A')"></div>
+<div>
+<h3 class="font-bold">Mehmet Kaya</h3>
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+</div>
+</div>
+</div>
+<p class="text-text-light/70 dark:text-text-dark/70 text-sm">"Havaalanı transferi için kullandım ve çok memnun kaldım. Araç çok temiz ve konforluydu."</p>
+</div>
+</div>
+<div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 p-2">
+<div class="flex flex-col gap-4 rounded-xl border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark p-6 h-full">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDkc5ibpO2Hjejh1uZbap1h3m1wwCnQStglrn-0y3rBAFmhBZYe16N7I5HWY5w2t3_GGj-xdXDf6LJfvrhGxTed_7Kia16wZnsBfIyrzMN3CgO37jqUAHDMTRckFv9qQe9vVCLlJQYqNETaQ2EH-jN6h5oL_wJ3zTHi2MIxbr1i5UtA336QLuyLjdiFUKs3OANLIgN56iQC2x8WWYbDGOrAD19fXDI5mu6oY_-ksyOeTX4fR-rvBuIe2LIxt1XbNxsuheCCO89E0j2A')"></div>
+<div>
+<h3 class="font-bold">Zeynep Demir</h3>
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+</div>
+</div>
+</div>
+<p class="text-text-light/70 dark:text-text-dark/70 text-sm">"Gece acil bir durum için aradım, hemen geldi. Güvenilirliği için kendisine teşekkür ederim."</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex justify-center mt-6 gap-2">
+<button class="w-3 h-3 rounded-full bg-primary"></button>
+<button class="w-3 h-3 rounded-full bg-border-light dark:bg-border-dark hover:bg-primary/50"></button>
+<button class="w-3 h-3 rounded-full bg-border-light dark:bg-border-dark hover:bg-primary/50"></button>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-10 p-4 mt-10" id="contact">
+<div class="flex flex-col gap-4 text-center">
+<h1 class="text-[32px] font-bold leading-tight tracking-[-0.033em]">İletişime Geçin</h1>
+<p class="text-text-light/80 dark:text-text-dark/80 max-w-2xl mx-auto">Rezervasyon yapmak, soru sormak veya özel transfer talepleriniz için aşağıdaki kanallardan bana ulaşabilirsiniz.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+<div class="flex flex-col gap-4">
+<div class="p-6 rounded-xl border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-3xl">phone</span>
+<div>
+<h3 class="font-bold">Telefon</h3>
+<a class="text-text-light/80 dark:text-text-dark/80 hover:text-primary" href="tel:+905522203122">+90 552 220 31 22</a>
+</div>
+</div>
+<div class="p-6 rounded-xl border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-3xl">sms</span>
+<div>
+<h3 class="font-bold">WhatsApp</h3>
+<a class="text-text-light/80 dark:text-text-dark/80 hover:text-primary" href="https://wa.me/905522203122" target="_blank">Mesaj Gönder</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Map embed for Istanbul -->
+<div class="w-full h-80 md:h-full rounded-xl overflow-hidden">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.1998610330934!2d29.091419700000003!3d37.7853557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c73f7cc5f99983%3A0x1da19b281cdb5cd3!2sDenizli%20Otogar%C4%B1!5e0!3m2!1str!2str!4v1763843628245!5m2!1str!2str"
+    width="100%" height="100%" style="border:0; min-height:320px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+</div>
+<footer class="mt-20 border-t border-border-light dark:border-border-dark pt-8 pb-10">
+<div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-6">
+<div>
+<h3 class="font-bold text-lg">Hızlı Taksi</h3>
+<p class="text-sm text-text-light/70 dark:text-text-dark/70 mt-1">Güvenli ve konforlu yolculuğun adresi.</p>
+</div>
+<div class="flex gap-4">
+<a class="text-sm hover:text-primary" href="#home">Ana Sayfa</a>
+<a class="text-sm hover:text-primary" href="#services">Hizmetler</a>
+<a class="text-sm hover:text-primary" href="#about">Hakkımda</a>
+<a class="text-sm hover:text-primary" href="#contact">İletişim</a>
+</div>
+</div>
+<div class="text-center text-xs text-text-light/60 dark:text-text-dark/60 mt-8">
+        © 2024 Taksi Hizmetleri. Tüm hakları saklıdır.
+    </div>
+</footer>
+</div>
+</div>
+</div>
+</div>
+<style>
+@media (prefers-color-scheme: dark) {
+  #mobileMenu {
+    background:rgba(255, 255, 255, 0.35)!important;
+  }
+}
+</style>
+<script>
+// Burger menu toggle logic
+const burgerBtn = document.getElementById('burgerBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+if (burgerBtn && mobileMenu) {
+  burgerBtn.addEventListener('click', () => {
+    if (mobileMenu.style.display === 'flex') {
+      mobileMenu.style.display = 'none';
+    } else {
+      mobileMenu.style.display = 'flex';
+    }
+  });
+}
+// Close menu when any link is clicked
+if (mobileMenu) {
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.style.display = 'none';
+    });
+  });
+}
+</script>
+</body></html>
